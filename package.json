@@ -1,0 +1,23 @@
+{
+  "name": "parse-browserify",
+  "version": "0.0.2",
+  "description": "Using the Parse Javascript SDK with Browserify",
+  "homepage": "http://www.parse.com",
+  "bugs": {
+    "url": "https://www.parse.com/questions/",
+    "email": "feedback@parse.com" 
+  },
+  "main": "build/parse-latest.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RnbWd/parse-browserify"
+  },
+  "keywords": [
+    "browserify",
+    "parse",
+    "cloud",
+    "api"
+  ],
+  "author": "David Wisner <david.wisner@dympl.com>",
+  "license": "MIT"
+}
