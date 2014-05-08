@@ -27,11 +27,18 @@ This is how it can be used in the browser:
 
 
 ```
-var Parse = require('parse-browserify').Parse;
-
-Parse.initialize(APP_ID, JS_KEY);
-
-module.exports = Parse;
+var Parse = require('parse').Parse;
+ 
+Parse.initialize("Your App Id", "Your JavaScript Key");
+ 
+var query = new Parse.Query(Parse.User);
+query.find({
+  success: function(users) {
+    for (var i = 0; i < users.length; ++i) {
+      console.log(users[i].get('username'));
+    }
+  }
+});
 
 ```
 
