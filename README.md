@@ -27,7 +27,7 @@ This is how it can be used in the browser:
 
 
 ```
-var Parse = require('parse').Parse;
+var Parse = require('parse-browserify').Parse;
  
 Parse.initialize("Your App Id", "Your JavaScript Key");
  
