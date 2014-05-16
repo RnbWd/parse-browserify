@@ -1,43 +1,19 @@
 parse-browserify
 ================
 
-I needed to tweak the parse js SDK a little for it to work with browserify, very minor change:
+Parse-SDK-Version: 1.2.18
+
+This is a tweaked version of the Parse SDK meant to be used client-side via browserify. 
 
 ```
-// Import Parse's local copy of underscore.
-  //Browserify transform
-  //if (typeof(exports) !== "undefined" && exports._) {
-    // We're running in Node.js.  Pull in the dependencies.
-    Parse._ = exports._.noConflict();
-    //Parse.localStorage = require('localStorage');
-    //Parse.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-    exports.Parse = Parse;
-  //} else {
-    //Parse._ = _.noConflict();
-    if (typeof(localStorage) !== "undefined") {
-      Parse.localStorage = localStorage;
-    }
-    if (typeof(XMLHttpRequest) !== "undefined") {
-      Parse.XMLHttpRequest = XMLHttpRequest;
-    }
-  //}
-```
-
-This is how it can be used in the browser:
-
-
-```
-var Parse = require('parse-browserify').Parse;
+var Parse = require('parse-browserify');
  
 Parse.initialize("Your App Id", "Your JavaScript Key");
  
-var query = new Parse.Query(Parse.User);
-query.find({
-  success: function(users) {
-    for (var i = 0; i < users.length; ++i) {
-      console.log(users[i].get('username'));
-    }
-  }
+var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
 });
 
 ```
