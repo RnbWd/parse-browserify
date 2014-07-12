@@ -1,6 +1,6 @@
 {
   "name": "parse-browserify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Using the Parse Javascript SDK with Browserify",
   "homepage": "http://www.parse.com",
   "bugs": {
