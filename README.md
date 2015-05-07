@@ -21,6 +21,4 @@ testObject.save({foo: "bar"}).then(function(object) {
 ```
 The purpose of this library is to let [Parse](https://www.parse.com) users require the js-sdk clientside. For nodejs users please use the official library [here](https://www.npmjs.org/package/parse). If you run into any bugs let me know, look at the source code, or just use the library as intended by Parse (I'm not affiliated).
 
-<david.wisner@dympl.com>
-
 **MIT**
